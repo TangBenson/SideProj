@@ -112,7 +112,7 @@ public class JwtAuthService : IJwtAuthService
         // (subject),Token 主題，放置該User內容
         claims.Add(new Claim(JwtRegisteredClaimNames.Sub, string.IsNullOrEmpty(jWTCliam.sub) ? "" : jWTCliam.sub));
 
-        // 添加自定義的聲明
+        // 添加自定義的聲明.
         claims.Add(new Claim("custName", jWTCliam.custName));
         claims.Add(new Claim("custMode", jWTCliam.custMode));
 
