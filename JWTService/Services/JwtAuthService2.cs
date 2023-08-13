@@ -14,11 +14,12 @@ namespace JWTService.Services
         public readonly string _key;
         private readonly IConfiguration _config;
         private readonly IHttpContextAccessor _httpContext;
-        public JwtAuthService2(IConfiguration configuration, IHttpContextAccessor httpContext)
+        public JwtAuthService2(IConfiguration configuration, IHttpContextAccessor httpContext,string a)
         {
             _config = configuration;
             _key = _config.GetSection("JwtSettings")["SignKey"]!.ToString();
             _httpContext = httpContext;
+            Console.WriteLine(a);
         }
 
         //產生 jwt Token

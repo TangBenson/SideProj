@@ -37,26 +37,26 @@ namespace JWTService.Controllers
             _jwtAuthService = jwtAuthService;
         }
 
-        [HttpGet]
-        // [AllowAnonymous] //允許未經驗證的使用者存取個別動作
-        // [Authorize] //限制呼叫時須透過驗證機制
-        public ActionResult Get()
-        {
-            try
-            {
-                return Ok($"操爆綺綺的小穴 - {_jwtconfig.Issuer}");
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
-            }
-        }
+        // [HttpGet]
+        // // [AllowAnonymous] //允許未經驗證的使用者存取個別動作
+        // // [Authorize] //限制呼叫時須透過驗證機制
+        // public ActionResult Get()
+        // {
+        //     try
+        //     {
+        //         return Ok($"操爆綺綺的小穴 - {_jwtconfig.Issuer}");
+        //     }
+        //     catch (Exception ex)
+        //     {
+        //         return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+        //     }
+        // }
 
-        [HttpGet(Name = "GetToken")]
-        public AuthResult Get2()
-        {
-            return _jwtAuthService.CreateJWT(null,"Benson",0);
-        }
+        // [HttpGet(Name = "GetToken")]
+        // public AuthResult Get2()
+        // {
+        //     return _jwtAuthService.CreateJWT(null,"Benson",0);
+        // }
 
         // //測試是否通過驗證
         // [HttpPost]
@@ -70,11 +70,11 @@ namespace JWTService.Controllers
         //     return true;
         // }
 
-        // [HttpGet]
-        // public Token Get(string user)
-        // {
-        //     return _a.Create(user);
-        // }
+        [HttpGet]
+        public Token Get(string user)
+        {
+            return _a.Create(user);
+        }
 
     }
 }

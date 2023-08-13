@@ -13,7 +13,21 @@ builder.Services.AddControllers();
 builder.Services.AddHttpContextAccessor();
 // builder.Services.AddEndpointsApiExplorer();
 // builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<JwtAuthService2>();
+
+/*
+這邊要好好解釋一下，之前JwtAuthService2建構子只帶入config和httpcontext時，AddScoped設定不用帶入任何簽章，因為
+config和httpcontext會自動注入給所有程式，這段是.net自動加的。而當JwtAuthService2建構子要多帶入一個簽章時，我就必須
+在AddScoped設定，但為何要連config和httpcontext也帶入，不是說自動嗎? 其實自動帶入是指programe以外的程式，因為.net
+自動加config和httpcontext是隱藏在programe裡的，所以若在programe就要new物件時，還是需要帶入config和httpcontext。
+以上是我自己理解的，不會有錯的
+*/
+// builder.Services.AddScoped<JwtAuthService2>();
+builder.Services.AddScoped<JwtAuthService2>(serviceProvider =>
+{
+    var configuration = serviceProvider.GetRequiredService<IConfiguration>();
+    var httpcontext = serviceProvider.GetRequiredService<IHttpContextAccessor>();
+    return new JwtAuthService2(configuration, httpcontext, "dddd");
+});
 
 builder.Services.AddScoped<IJwtAuthService, JwtAuthService>();
 builder.Services.Configure<JWTConfig>(builder.Configuration.GetSection("JwtSettings"));
