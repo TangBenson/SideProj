@@ -2,7 +2,7 @@
 React.JS
 GraphQL
 JWT
-.Net 7(HttpClientFactory、Linq..)
+.Net 7(HttpClientFactory、Linq、HttpContextCache、Restful)
 RabbitMQ
 AKS
 EFCore (Code First)
