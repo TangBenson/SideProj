@@ -1,0 +1,44 @@
+syntax = "proto3";
+//C# 在產生程式碼時所使用的 Namespace 名稱
+option csharp_namespace = "LoginGrpcService";
+//類似 Namespace 的效果，選擇性填寫，但是如果遇到 service 或 message 有衝突的時候，package 將有助於明確化
+package myemployee;
+
+//定義服務
+service Employee {
+    // 定義4個 API
+	rpc GetEmployee (EmployeeRequest) returns (EmployeeModel);
+	rpc GetAllEmployees (EmployeeRequest) returns (stream EmployeeModel);
+	rpc AddEmployee (EmployeeModel) returns (EmployeeAddedResult);
+	rpc AddEmployees (stream EmployeeModel) returns (EmployeeAddedResult);
+}
+
+//定義一個訊息結構
+message EmployeeRequest {
+	int32 id = 1; //gRPC 實際上在對應 message 欄位時的順序
+}
+
+message EmployeeModel {
+	int32 id = 1;
+	string name = 2;
+
+	message PhoneNumber {
+		string value = 1; // 字段标识号 1（在 PhoneNumber 内部）
+	}
+    //repeated表示该字段是一个可重复的数组或列表，每个 EmployeeModel 对象可以包含多个电话号码
+	repeated PhoneNumber phone_numbers = 3;
+
+	EmployeeType employee_type = 4;
+
+	string modifiedTime = 5;
+}
+
+enum EmployeeType {
+	FIRST_LEVEL = 0;
+	SECOND_LEVEL = 1;
+	LAST_LEVEL = 2;
+}
+
+message EmployeeAddedResult {
+	bool is_success = 1;
+}

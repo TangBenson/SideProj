@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KPNp00o9yBUyrIwAAxAQJse4aWbBS6Eoi8Yj1US/kMU=",
+  "Source": "LoginGrpcService",
+  "BasePath": "_content/LoginGrpcService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
