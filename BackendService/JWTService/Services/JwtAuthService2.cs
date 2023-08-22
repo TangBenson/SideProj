@@ -10,51 +10,47 @@ namespace JWTService.Services
 {
     public class JwtAuthService2
     {
-        //金鑰，從設定檔或資料庫取得
-        public readonly string _key;
+        public readonly string _key; //金鑰，從設定檔或資料庫取得
         private readonly IConfiguration _config;
         private readonly IHttpContextAccessor _httpContext;
-        public JwtAuthService2(IConfiguration configuration, IHttpContextAccessor httpContext,string a)
+        public JwtAuthService2(IConfiguration configuration, IHttpContextAccessor httpContext, string test)
         {
             _config = configuration;
             _key = _config.GetSection("JwtSettings")["SignKey"]!.ToString();
             _httpContext = httpContext;
-            Console.WriteLine(a);
+            Console.WriteLine(test);
         }
 
         //產生 jwt Token
         public Token Create(string user)
         {
-            Console.WriteLine(_key);
+            Console.WriteLine($"secret是{_key}");
             var exp = 3600;   //過期時間(秒)
 
             //稍微修改 Payload 將使用者資訊和過期時間分開
             var payload = new Payload
             {
-                info = user,
-                //Unix 時間戳
-                exp = Convert.ToInt32(
-                    (DateTime.Now.AddSeconds(exp) -
-                     new DateTime(2023, 8, 1)).TotalSeconds)
+                Info = user,
+                Exp = Convert.ToInt32((DateTime.Now.AddSeconds(exp) - new DateTime(2023, 8, 1)).TotalSeconds)
             };
 
             var payloadJson = JsonSerializer.Serialize(payload);
             var payloadBase64 = Convert.ToBase64String(Encoding.UTF8.GetBytes(payloadJson));
-            var iv = Guid.NewGuid().ToString().Replace("-", "").Substring(0, 16);
+            var iv = Guid.NewGuid().ToString().Replace("-", "")[..16]; // [..16]是.Substring(0, 16)的簡寫，真美阿
 
             //使用 AES 加密 Payload
-            var payloadEncrypt = AESEncrypt(payloadBase64, _key.Substring(0, 16), iv);
+            var payloadEncrypt = AESEncrypt(payloadBase64, _key[..16], iv);
 
             //取得簽章，把 header拿來放 iv
-            var signature = ComputeHMACSHA256(iv + "." + payloadEncrypt, _key.Substring(0, 16));
+            var signature = ComputeHMACSHA256(iv + "." + payloadEncrypt, _key[..16]);
 
             return new Token
             {
-                //Token 為 iv + encrypt + signature，並用 . 串聯
-                access_token = iv + "." + payloadEncrypt + "." + signature,
+                //Token 為 iv + encrypt + signature，並用.串聯
+                Access_token = iv + "." + payloadEncrypt + "." + signature,
                 //Refresh Token 使用 Guid 產生
-                refresh_token = Guid.NewGuid().ToString().Replace("-", ""),
-                expires_in = exp,
+                Refresh_token = Guid.NewGuid().ToString().Replace("-", ""),
+                Expires_in = exp,
             };
         }
 
@@ -69,24 +65,26 @@ namespace JWTService.Services
             var signature = split[2];
 
             //檢查簽章是否正確
-            if (signature != ComputeHMACSHA256(iv + "." + encrypt, _key.Substring(0, 64)))
+            if (signature != ComputeHMACSHA256(iv + "." + encrypt, _key[..16]))
             {
+                Console.WriteLine("這裡");
                 return null;
             }
 
             //使用 AES 解密 Payload
-            var base64 = AESDecrypt(encrypt, _key.Substring(0, 16), iv);
+            var base64 = AESDecrypt(encrypt, _key[..16], iv);
             var json = Encoding.UTF8.GetString(Convert.FromBase64String(base64));
             var payload = JsonSerializer.Deserialize<Payload>(json);
 
             //檢查是否過期
-            if (payload.exp < Convert.ToInt32(
+            if (payload.Exp < Convert.ToInt32(
                 (DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds))
             {
+                Console.WriteLine("那裏");
                 return null;
             }
 
-            return payload.info;
+            return payload.Info;
         }
 
 
@@ -145,15 +143,15 @@ namespace JWTService.Services
     //定義回傳的 Token 結構
     public class Token
     {
-        public string access_token { get; set; } = "";
-        public string refresh_token { get; set; } = "";
-        public int expires_in { get; set; }
+        public string Access_token { get; set; } = "";
+        public string Refresh_token { get; set; } = "";
+        public int Expires_in { get; set; }
     }
     public class Payload
     {
         //使用者資訊
-        public string info { get; set; } = "";
+        public string Info { get; set; } = "";
         //過期時間
-        public int exp { get; set; }
+        public int Exp { get; set; }
     }
 }

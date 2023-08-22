@@ -11,18 +11,18 @@ namespace JWTService.Models
         /// Token是否有成功產生狀態
         /// </summary>
         /// <value>布林值</value>
-        public bool result { set; get; }
+        public bool Result { set; get; } = false;
 
         /// <summary>
         /// Token
         /// </summary>
         /// <value>字串</value>
-        public string jwt { set; get; }
+        public string Jwt { set; get; } = "";
 
         /// <summary>
         /// 處理訊息
         /// </summary>
         /// <value>字串</value>
-        public string msg { set; get; }
+        public string Msg { set; get; } = "";
     }
 }

@@ -20,6 +20,6 @@ namespace JWTService.Models
         /// <summary>
         /// 設置Token存活多久(分鐘)
         /// </summary>
-        // public int ExpireDateTime { set; get; }
+        public int ExpireDateTime { set; get; }
     }
 }

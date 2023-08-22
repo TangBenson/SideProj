@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AqA+IYnb5uJPycBs36Nes3CNvrNUDhvte5K1gf64saGgjtN46HrfMTEt0GqRjKpwQVpzPtmFvXNQg3g7lWCi/g==",
+  "dgSpecHash": "hA1BQciZZ8VTLbryaZes0Ypqamn0wPHvj6F4cy31F8NIFP9rHRR3rEfqcG6Dk16e4C1nZUow7GKdtlqlFacIgA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\JWTService\\JWTService.csproj",
+  "projectFilePath": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\JWTService\\JWTService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\benso\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.10\\microsoft.aspnetcore.authentication.jwtbearer.7.0.10.nupkg.sha512",
     "C:\\Users\\benso\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",

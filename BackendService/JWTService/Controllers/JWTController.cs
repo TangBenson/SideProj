@@ -15,31 +15,27 @@ namespace JWTService.Controllers
     [Route("api/[controller]/[action]")]
     public class JWTController : ControllerBase
     {
-        private readonly IConfiguration _config;
-        private readonly IHttpContextAccessor _httpContext;
-        private JwtAuthService2 _a;
-        private readonly JWTConfig _jwtconfig;
-        private IJwtAuthService _jwtAuthService;
+        // private readonly JWTConfig _jwtconfig; //測試一些取值,與jwt無關
+        // private readonly JwtAuthService2 _jwt2;
+        private readonly IJwtAuthService _jwt;
 
         public JWTController(
-            IConfiguration configuration,
-            IHttpContextAccessor httpContext,
-            IOptionsMonitor<JWTConfig> option,
-            IJwtAuthService jwtAuthService,
-            JwtAuthService2 aa)
+            // IOptionsMonitor<JWTConfig> option,
+            // JwtAuthService2 jwt2
+            IJwtAuthService jwt
+            )
         {
-            _config = configuration;
-            _httpContext = httpContext;
-            // 昨天很困擾我的controller和service都要注入iconfig和ihttp的問題，我只要在controller簽章中多帶入JwtAuthService2 aa並賦值給_a即可
-            // _a = new JwtAuthService2(_config, _httpContext);
-            _a = aa;
-            _jwtconfig = option.CurrentValue;
-            _jwtAuthService = jwtAuthService;
+            // _jwtconfig = option.CurrentValue;
+
+            // 昨天很困擾我的controller和service都要注入iconfig和ihttp的問題,我只要在controller簽章中多帶入JwtAuthService2 jwt2並賦值給_jwt2即可
+            // _jwt2 = new JwtAuthService2(_config, _httpContext);
+            // _jwt2 = jwt2;
+
+            _jwt = jwt;
         }
 
+        #region 測試一些取值,與jwt無關
         // [HttpGet]
-        // // [AllowAnonymous] //允許未經驗證的使用者存取個別動作
-        // // [Authorize] //限制呼叫時須透過驗證機制
         // public ActionResult Get()
         // {
         //     try
@@ -51,18 +47,16 @@ namespace JWTService.Controllers
         //         return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
         //     }
         // }
+        #endregion
 
-        // [HttpGet(Name = "GetToken")]
-        // public AuthResult Get2()
-        // {
-        //     return _jwtAuthService.CreateJWT(null,"Benson",0);
-        // }
-
+        #region JwtAuthService2用的,這個範例service是手刻整套jwt流程,包含編碼+雜湊,又多加aes加密
         // //測試是否通過驗證
         // [HttpPost]
+        // // [AllowAnonymous] //允許未經驗證的使用者存取個別動作
+        // // [Authorize] //限制呼叫時須透過驗證機制,如果沒有通過權限校驗,則http返回狀態碼爲401
         // public bool IsAuthenticated()
         // {
-        //     var user = _a.Validate();
+        //     var user = _jwt2.Validate();
         //     if (user == null)
         //     {
         //         return false;
@@ -70,11 +64,19 @@ namespace JWTService.Controllers
         //     return true;
         // }
 
-        [HttpGet]
-        public Token Get(string user)
+        // [HttpGet]
+        // public Token Get(string user)
+        // {
+        //     return _jwt2.Create(user);
+        // }
+        #endregion
+        
+        #region JwtAuthService用的
+        [HttpGet(Name = "GetToken")]
+        public AuthResult Get2()
         {
-            return _a.Create(user);
+            return _jwt.CreateJWT("Benson");
         }
-
+        #endregion
     }
 }

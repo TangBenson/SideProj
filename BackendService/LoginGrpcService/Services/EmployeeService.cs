@@ -26,8 +26,11 @@ public class EmployeeService : Employee.EmployeeBase
             Id = 1,
             Name = "Johnny",
             EmployeeType = EmployeeType.FirstLevel,
-            PhoneNumbers = { new EmployeeModel.Types.PhoneNumber { Value = "0912345678" } },
-            ModifiedTime = "ccgg"
+            PhoneNumbers = {
+                new EmployeeModel.Types.PhoneNumber { Value = "0912345678" },
+                new EmployeeModel.Types.PhoneNumber { Value = "0928250058" }
+                },
+            ModifiedTime = "pptt"
         };
 
         return Task.FromResult(employee);

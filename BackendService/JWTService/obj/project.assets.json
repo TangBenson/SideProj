@@ -878,11 +878,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\JWTService\\JWTService.csproj",
+      "projectUniqueName": "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\JWTService\\JWTService.csproj",
       "projectName": "JWTService",
-      "projectPath": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\JWTService\\JWTService.csproj",
+      "projectPath": "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\JWTService\\JWTService.csproj",
       "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\JWTService\\obj\\",
+      "outputPath": "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\JWTService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"

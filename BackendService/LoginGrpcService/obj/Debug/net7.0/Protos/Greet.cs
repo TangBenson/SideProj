@@ -27,9 +27,9 @@ namespace LoginGrpcService {
             "ChJQcm90b3MvZ3JlZXQucHJvdG8SBWdyZWV0Ii0KDEhlbGxvUmVxdWVzdBIO",
             "CgZhY291bnQYASABKAkSDQoFcGF2dmQYAiABKAkiRwoKSGVsbG9SZXBseRIO",
             "CgZlbmRtc2cYASABKAkSEwoLYWNjZXNzVG9rZW4YAiABKAkSFAoMcmVmcmVz",
-            "aFRva2VuGAMgASgJMj0KB0dyZWV0ZXISMgoIU2F5SGVsbG8SEy5ncmVldC5I",
-            "ZWxsb1JlcXVlc3QaES5ncmVldC5IZWxsb1JlcGx5QhOqAhBMb2dpbkdycGNT",
-            "ZXJ2aWNlYgZwcm90bzM="));
+            "aFRva2VuGAMgASgJMj8KB0dyZWV0ZXISNAoKQ2hlY2tMb2dpbhITLmdyZWV0",
+            "LkhlbGxvUmVxdWVzdBoRLmdyZWV0LkhlbGxvUmVwbHlCE6oCEExvZ2luR3Jw",
+            "Y1NlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

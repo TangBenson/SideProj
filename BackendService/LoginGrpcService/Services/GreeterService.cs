@@ -11,13 +11,16 @@ public class GreeterService : Greeter.GreeterBase
         _logger = logger;
     }
 
-    public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
+    public override Task<HelloReply> CheckLogin(HelloRequest request, ServerCallContext context)
     {
+        //呼叫jwt驗證
+        
+
         return Task.FromResult(new HelloReply
         {
-            Endmsg = "Hello " + request.Acount,
-            AccessToken = "Hello " + request.Pavvd,
-            RefreshToken = "Hello " + request.Pavvd
+            Endmsg = "GG, " + request.Acount,
+            AccessToken = "RR, " + request.Pavvd,
+            RefreshToken = "嗨, " + request.Pavvd
         });
     }
 }

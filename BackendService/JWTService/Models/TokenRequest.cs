@@ -9,8 +9,8 @@ namespace JWTService.Models
     public class TokenRequest
     {
         [Required]
-        public string Token { get; set; }
+        public string Token { get; set; } = "";
         [Required]
-        public string RefrashToken { get; set; }
+        public string RefrashToken { get; set; } = "";
     }
 }

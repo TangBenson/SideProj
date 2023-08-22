@@ -12,13 +12,13 @@ namespace JWTService.Services.Interface
         ///  產生JWT Token
         /// </summary>
         /// <param name="jWTCliam">Token 資訊聲明內容物件</param>
-        /// <param name="secretKey">加密金鑰，用來做加密簽章用</param>
+        /// <param name="secretKey">加密金鑰,用來做加密簽章用</param>
         /// <param name="issur">Token 發行者資訊</param>
         /// <param name="expireMinutes">Token 有效期限(分鐘)</param>
-        /// <returns>回應內容物件，內容屬性jwt放置Token字串</returns>
+        /// <returns>回應內容物件,內容屬性jwt放置Token字串</returns>
         AuthResult CreateJWT(
-            JWTCliam jWTCliam,
             string issuer,
+            JWTCliam jWTCliam = null,
             int expireMinutes = 30
         );
     }

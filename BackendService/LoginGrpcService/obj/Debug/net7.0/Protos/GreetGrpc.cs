@@ -54,10 +54,10 @@ namespace LoginGrpcService {
     static readonly grpc::Marshaller<global::LoginGrpcService.HelloReply> __Marshaller_greet_HelloReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::LoginGrpcService.HelloReply.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::LoginGrpcService.HelloRequest, global::LoginGrpcService.HelloReply> __Method_SayHello = new grpc::Method<global::LoginGrpcService.HelloRequest, global::LoginGrpcService.HelloReply>(
+    static readonly grpc::Method<global::LoginGrpcService.HelloRequest, global::LoginGrpcService.HelloReply> __Method_CheckLogin = new grpc::Method<global::LoginGrpcService.HelloRequest, global::LoginGrpcService.HelloReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SayHello",
+        "CheckLogin",
         __Marshaller_greet_HelloRequest,
         __Marshaller_greet_HelloReply);
 
@@ -78,7 +78,7 @@ namespace LoginGrpcService {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::LoginGrpcService.HelloReply> SayHello(global::LoginGrpcService.HelloRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::LoginGrpcService.HelloReply> CheckLogin(global::LoginGrpcService.HelloRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -91,7 +91,7 @@ namespace LoginGrpcService {
     public static grpc::ServerServiceDefinition BindService(GreeterBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_SayHello, serviceImpl.SayHello).Build();
+          .AddMethod(__Method_CheckLogin, serviceImpl.CheckLogin).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -101,7 +101,7 @@ namespace LoginGrpcService {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, GreeterBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_SayHello, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::LoginGrpcService.HelloRequest, global::LoginGrpcService.HelloReply>(serviceImpl.SayHello));
+      serviceBinder.AddMethod(__Method_CheckLogin, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::LoginGrpcService.HelloRequest, global::LoginGrpcService.HelloReply>(serviceImpl.CheckLogin));
     }
 
   }
