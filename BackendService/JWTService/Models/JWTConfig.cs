@@ -10,7 +10,7 @@ namespace JWTService.Models
         /// <summary>
         /// 發行者
         /// </summary>
-        public string Issuer { set; get; } = "";
+        // public string Issuer { set; get; } = "";
 
         /// <summary>
         /// 加密金鑰
@@ -20,6 +20,6 @@ namespace JWTService.Models
         /// <summary>
         /// 設置Token存活多久(分鐘)
         /// </summary>
-        public int ExpireDateTime { set; get; }
+        // public int ExpireDateTime { set; get; }
     }
 }

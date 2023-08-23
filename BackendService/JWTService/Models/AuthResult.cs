@@ -14,15 +14,11 @@ namespace JWTService.Models
         public bool Result { set; get; } = false;
 
         /// <summary>
-        /// Token
+        /// AccessToken
         /// </summary>
         /// <value>字串</value>
-        public string Jwt { set; get; } = "";
+        public string JwtToken { set; get; } = "";
 
-        /// <summary>
-        /// 處理訊息
-        /// </summary>
-        /// <value>字串</value>
-        public string Msg { set; get; } = "";
+        public string RefreshToken { set; get; } = "";
     }
 }

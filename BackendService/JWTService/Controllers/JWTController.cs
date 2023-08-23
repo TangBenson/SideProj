@@ -40,7 +40,7 @@ namespace JWTService.Controllers
         // {
         //     try
         //     {
-        //         return Ok($"操爆綺綺的小穴 - {_jwtconfig.Issuer}");
+        //         return Ok($"五一五ㄚㄚ - {_jwtconfig.Issuer}");
         //     }
         //     catch (Exception ex)
         //     {
@@ -52,8 +52,6 @@ namespace JWTService.Controllers
         #region JwtAuthService2用的,這個範例service是手刻整套jwt流程,包含編碼+雜湊,又多加aes加密
         // //測試是否通過驗證
         // [HttpPost]
-        // // [AllowAnonymous] //允許未經驗證的使用者存取個別動作
-        // // [Authorize] //限制呼叫時須透過驗證機制,如果沒有通過權限校驗,則http返回狀態碼爲401
         // public bool IsAuthenticated()
         // {
         //     var user = _jwt2.Validate();
@@ -70,12 +68,27 @@ namespace JWTService.Controllers
         //     return _jwt2.Create(user);
         // }
         #endregion
-        
+
         #region JwtAuthService用的
         [HttpGet(Name = "GetToken")]
         public AuthResult Get2()
         {
             return _jwt.CreateJWT("Benson");
+        }
+
+        [HttpPost]
+        [Authorize] //限制呼叫時須透過驗證機制,如果沒有通過權限校驗,則http返回狀態碼爲401
+        public bool TestAuthorize(TokenRequest tokenRequest)
+        {
+            Console.WriteLine(tokenRequest.JwtToken);
+            return _jwt.VerifyAndGenerateToken(tokenRequest);
+        }
+
+        [HttpGet]
+        [AllowAnonymous] //允許未經驗證的使用者存取個別動作
+        public string TestAllowAnonymous()
+        {
+            return "HHHHHHHHHH";
         }
         #endregion
     }

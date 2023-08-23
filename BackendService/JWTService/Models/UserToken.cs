@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace JWTService.Models
 {
-    public class TokenRequest
+    public class UserToken
     {
-        public string JwtToken { set; get; } = "";
-
+        public string Account { set; get; } = "";
+        public string Token { set; get; } = "";
         public string RefreshToken { set; get; } = "";
+        
     }
 }
