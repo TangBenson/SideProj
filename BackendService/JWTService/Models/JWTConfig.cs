@@ -10,7 +10,7 @@ namespace JWTService.Models
         /// <summary>
         /// 發行者
         /// </summary>
-        // public string Issuer { set; get; } = "";
+        public string Issuer { set; get; } = "";
 
         /// <summary>
         /// 加密金鑰

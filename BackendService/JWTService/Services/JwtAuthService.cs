@@ -31,22 +31,19 @@ public class JwtAuthService : IJwtAuthService
             //appsettings中JwtConfig的Secret值
             byte[] key = Encoding.ASCII.GetBytes(_jwtconfig.SignKey);
 
-            //定義token描述
-            //SecurityTokenDescriptor下設定的是回傳的payload內容，而Subject設定的不知要幹嘛，別的範例是用來接收client端自定義的payload內容
+            //定義token描述，SecurityTokenDescriptor下設定的是回傳的payload內容，Subject用來接收client端自定義的payload內容，若重覆會抓Subject外層的
             SecurityTokenDescriptor tokenDescriptor = new()
             {
-                Issuer = "iRent發行", // 設置發行者資訊
+                // Nbf 預設此時此刻
+                // Iat 預設此時此刻
+                Issuer = _jwtconfig.Issuer, // 設置發行者資訊
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Iss, issuer),
                     new Claim(JwtRegisteredClaimNames.Email, "xxx@gmail.com"),
-                    new Claim(JwtRegisteredClaimNames.Nbf, "1000")
                 }),
-                Expires = DateTime.Now.AddSeconds(300), //設定Token的時效
-                // NotBefore = DateTime.Now,
-
-                //設定加密方式，key(appsettings中JwtConfig的Secret值)與HMAC SHA512演算法
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha512Signature)
+                Expires = DateTime.UtcNow.AddSeconds(30), //設定Token的時效
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha512Signature) //設定加密方式
             };
             JwtSecurityTokenHandler jwtTokenHandler = new();//宣告JwtSecurityTokenHandler，用來建立token
             SecurityToken token = jwtTokenHandler.CreateToken(tokenDescriptor);//使用SecurityTokenDescriptor建立JWT securityToken
