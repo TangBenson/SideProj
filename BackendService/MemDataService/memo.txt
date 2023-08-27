@@ -1,0 +1,1 @@
+podman run --name MyRedisCache -d -p 6379:6369 docker.io/library/redis
