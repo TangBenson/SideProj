@@ -1,1 +1,3 @@
-podman run --name MyRedisCache -d -p 6379:6369 docker.io/library/redis
+podman run --name MyRedisCache -d -p 6379:6379 docker.io/library/redis
+
+podman run --name MyRedisGUI -d -p 5001:5001 docker.io/marian/rebrow
