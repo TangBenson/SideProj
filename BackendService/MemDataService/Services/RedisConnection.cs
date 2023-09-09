@@ -14,11 +14,14 @@ public class RedisConnection
         return new RedisConnection();
     });
     private static string _settingOption;
+
+
+
+
+
+
+    public static RedisConnection Instance =>lazy.Value;
     public readonly ConnectionMultiplexer ConnectionMultiplexer;
-    public static RedisConnection Instance
-    {
-        get { return lazy.Value; }
-    }
     private RedisConnection()
     {
         ConnectionMultiplexer = ConnectionMultiplexer.Connect(_settingOption);

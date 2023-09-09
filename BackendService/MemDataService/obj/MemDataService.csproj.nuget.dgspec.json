@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj": {}
+    "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj": {
+    "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj",
+        "projectUniqueName": "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj",
         "projectName": "MemDataService",
-        "projectPath": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj",
+        "projectPath": "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj",
         "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\obj\\",
+        "outputPath": "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"
