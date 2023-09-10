@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj": {}
+    "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\EFcoreService\\EFcoreService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj": {
+    "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\EFcoreService\\EFcoreService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj",
-        "projectName": "MemDataService",
-        "projectPath": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj",
+        "projectUniqueName": "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\EFcoreService\\EFcoreService.csproj",
+        "projectName": "EFcoreService",
+        "projectPath": "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\EFcoreService\\EFcoreService.csproj",
         "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\obj\\",
+        "outputPath": "c:\\Users\\benso\\OneDrive\\文件\\dotnetProject\\FourSeasonRiver\\BackendService\\EFcoreService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,17 +38,15 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
+            "Microsoft.EntityframeworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.10, )"
             },
-            "StackExchange.Redis": {
+            "Microsoft.EntityframeworkCore.SqlServer": {
               "target": "Package",
-              "version": "[2.6.122, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[7.0.10, )"
             }
           },
           "imports": [
@@ -63,9 +61,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

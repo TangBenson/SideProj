@@ -19,23 +19,19 @@ public class RedisController : ControllerBase
     [HttpGet]
     public IActionResult Get2()
     {
-        RedisClient a1 = new();
-        RedisClient a2 = new();
         // 初始化 Redis 連接
         RedisClient.Init("localhost:6379"); // 可以傳入 Redis 伺服器的連接字串
 
         // 寫入資料到 Redis
-        IDatabase redisDb = a1.Instance.GetDatabase();
+        var redisDb = RedisClient.Instance.GetDatabase();
         redisDb.StringSet("myKey", "Hello, Redis!");
 
         // 從 Redis 讀取資料
         string result = redisDb.StringGet("myKey");
 
-        Console.WriteLine(a1 == a2);
         Console.WriteLine($"Value from Redis: {result}");
 
-        // 關閉 Redis 連接（可選）
-        a1.Instance.Close();
+        RedisClient.Instance.Close();
 
         return Ok("成功");
     }

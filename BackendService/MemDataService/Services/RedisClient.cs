@@ -19,8 +19,8 @@ public class RedisClient
     而 private ConnectionMultiplexer Instance = s_connectionLazy.Value;
     這是一個字段（field）的定義，它的值在初始化後不會再改變。這就是字段和屬性之間的區別。
     */
-    public ConnectionMultiplexer Instance => s_connectionLazy.Value;
-    // public IDatabase Database => this.Instance.GetDatabase();
+    public static ConnectionMultiplexer Instance => s_connectionLazy.Value;
+    public IDatabase Database => Instance.GetDatabase();
     static RedisClient()
     {
         s_connectionLazy = new Lazy<ConnectionMultiplexer>(() =>
