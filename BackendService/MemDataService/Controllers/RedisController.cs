@@ -31,6 +31,16 @@ public class RedisController : ControllerBase
 
         Console.WriteLine($"Value from Redis: {result}");
 
+        //Redis的PUB/SUB的訊息機制小玩，相比RabbitMQ陽春很多
+        var sub = RedisClient.Instance.GetSubscriber();
+        Console.WriteLine($"{DateTime.Now:yyyy-MM-dd hh:mm:ss.fff} - Subscribed channel topic.test ");
+        sub.Subscribe(RedisChannel.Literal("topic.test"), (channel, message) =>
+        {
+            Console.WriteLine($"{DateTime.Now:yyyy-MM-dd hh:mm:ss.fff} - Received message {message}");
+        });
+        RedisClient.Instance.GetDatabase().Publish(RedisChannel.Literal("topic.test"), "Hello World!");
+        Console.WriteLine($"{DateTime.Now:yyyy-MM-dd hh:mm:ss.fff} - Published message to channel topic.test");
+
         RedisClient.Instance.Close();
 
         return Ok("成功");
@@ -53,29 +63,29 @@ public class RedisController : ControllerBase
         return Ok("成功");
     }
 
-    public IActionResult Get4()
-    {
-        RedisConnection.Init("localhost:6379");
-        var redis = RedisConnection.Instance.ConnectionMultiplexer;
-        var db = redis.GetDatabase(0);
-        db.StringSet("Peggy", 160);
-        var result = db.StringGet("Peggy");
-        Console.WriteLine(result);
+    // public IActionResult Get4()
+    // {
+    //     RedisConnection.Init("localhost:6379");
+    //     var redis = RedisConnection.Instance.ConnectionMultiplexer;
+    //     var db = redis.GetDatabase(0);
+    //     db.StringSet("Peggy", 160);
+    //     var result = db.StringGet("Peggy");
+    //     Console.WriteLine(result);
 
-        //Redis的PUB/SUB的訊息機制小玩，相比RabbitMQ陽春很多
-        var sub = redis.GetSubscriber();
-        Console.WriteLine($"{DateTime.Now:yyyy-MM-dd hh:mm:ss.fff} - Subscribed channel topic.test ");
-        sub.Subscribe(RedisChannel.Literal("topic.test"), (channel, message) =>
-        {
-            Console.WriteLine($"{DateTime.Now:yyyy-MM-dd hh:mm:ss.fff} - Received message {message}");
-        });
-        redis.GetDatabase().Publish(RedisChannel.Literal("topic.test"), "Hello World!");
-        Console.WriteLine($"{DateTime.Now:yyyy-MM-dd hh:mm:ss.fff} - Published message to channel topic.test");
+    //     //Redis的PUB/SUB的訊息機制小玩，相比RabbitMQ陽春很多
+    //     var sub = redis.GetSubscriber();
+    //     Console.WriteLine($"{DateTime.Now:yyyy-MM-dd hh:mm:ss.fff} - Subscribed channel topic.test ");
+    //     sub.Subscribe(RedisChannel.Literal("topic.test"), (channel, message) =>
+    //     {
+    //         Console.WriteLine($"{DateTime.Now:yyyy-MM-dd hh:mm:ss.fff} - Received message {message}");
+    //     });
+    //     redis.GetDatabase().Publish(RedisChannel.Literal("topic.test"), "Hello World!");
+    //     Console.WriteLine($"{DateTime.Now:yyyy-MM-dd hh:mm:ss.fff} - Published message to channel topic.test");
 
-        redis.Dispose();
+    //     redis.Dispose();
 
-        return Ok("成功");
-    }
+    //     return Ok("成功");
+    // }
 }
 
 public class A
