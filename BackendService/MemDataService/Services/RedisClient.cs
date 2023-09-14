@@ -12,7 +12,7 @@ public class RedisClient
 
 
 
-    private static string _setting;
+    private static string _setting = "";
     /*
     這是一個 C# 8.0 引入的簡化屬性（Simplified Property）的寫法，
     等同 private ConnectionMultiplexer Instance{ get{ return s_connectionLazy.Value; }}。
