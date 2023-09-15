@@ -1,0 +1,12 @@
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\bin\Debug\net7.0\RedisService.deps.json
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\bin\Debug\net7.0\RedisService.dll
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\bin\Debug\net7.0\RedisService.pdb
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\obj\Debug\net7.0\RedisService.csproj.AssemblyReference.cache
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\obj\Debug\net7.0\RedisService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\obj\Debug\net7.0\RedisService.AssemblyInfoInputs.cache
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\obj\Debug\net7.0\RedisService.AssemblyInfo.cs
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\obj\Debug\net7.0\RedisService.csproj.CoreCompileInputs.cache
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\obj\Debug\net7.0\RedisService.dll
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\obj\Debug\net7.0\refint\RedisService.dll
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\obj\Debug\net7.0\RedisService.pdb
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\RedisService\obj\Debug\net7.0\ref\RedisService.dll

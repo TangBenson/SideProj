@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EfCodeFirstService.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230914133814_AddCustomerToDb")]
-    partial class AddCustomerToDb
+    [Migration("20230915002839_AddxxxToDb")]
+    partial class AddxxxToDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

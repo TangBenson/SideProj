@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EFcoreService.Models;
+namespace EfCodeFirstService.Models;
 public class MemberData
 {
     public string ID { get; set; } = "";

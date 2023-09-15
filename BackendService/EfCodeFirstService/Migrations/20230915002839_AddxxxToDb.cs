@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EfCodeFirstService.Migrations
 {
     /// <inheritdoc />
-    public partial class AddCustomerToDb : Migration
+    public partial class AddxxxToDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
