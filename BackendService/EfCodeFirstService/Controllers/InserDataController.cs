@@ -12,7 +12,7 @@ namespace EfCodeFirstService.Controllers;
 [Route("api/[controller]")] //http://localhost:5046/api/InserData
 public class InserDataController : ControllerBase
 {
-    private AppDbContext _context;
+    private readonly AppDbContext _context;
     public InserDataController(AppDbContext context)
     {
         _context = context;
@@ -62,6 +62,44 @@ public class InserDataController : ControllerBase
             },
         };
         _context.car.AddRange(cardatalist);
+        await _context.SaveChangesAsync();
+
+
+        var mematalist = new List<MemberData>()
+        {
+            new MemberData{
+                ID = "A123456789",
+                Basvd = "",
+                Name = "老大",
+                Email = "",
+                Phone=""
+            },new MemberData{
+                ID = "B123456789",
+                Basvd = "",
+                Name = "老二",
+                Email = "",
+                Phone=""
+            },new MemberData{
+                ID = "C123456789",
+                Basvd = "",
+                Name = "老三",
+                Email = "",
+                Phone=""
+            },new MemberData{
+                ID = "D123456789",
+                Basvd = "",
+                Name = "老四",
+                Email = "",
+                Phone=""
+            },new MemberData{
+                ID = "E123456789",
+                Basvd = "",
+                Name = "老五",
+                Email = "",
+                Phone=""
+            }
+        };
+        _context.member.AddRange(mematalist);
         await _context.SaveChangesAsync();
     }
 }

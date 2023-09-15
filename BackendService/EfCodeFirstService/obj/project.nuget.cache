@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BjMhnIYj2IRgvQmSP19F2ERJBj4lxU/Mo7N7g+Z5p3pnR9JWCfSRTHhXpBi8BluYip2OF6BwFNyXejt1KJ3X/g==",
+  "dgSpecHash": "WXn0vALhUsQnA3RTNDQYHzp4Gq/8Wjlbln3Q5wQg2ryj+oweloiURCTRUBEFUVXI036BsrIIoCgipcqWAf7uyA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\EfCodeFirstService.csproj",
+  "projectFilePath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\EfCodeFirstService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\benson922\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\benson922\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

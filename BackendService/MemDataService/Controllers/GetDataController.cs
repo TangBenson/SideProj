@@ -11,7 +11,7 @@ namespace MemDataService.Controllers
     [Route("api/[controller]")]
     public class GetDataController : ControllerBase
     {
-        private IGetDataService _myService;
+        private readonly IGetDataService _myService;
         public GetDataController(IGetDataService myService)
         {
             _myService = myService;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\EfCodeFirstService.csproj": {}
+    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\EfCodeFirstService.csproj": {}
   },
   "projects": {
-    "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\EfCodeFirstService.csproj": {
+    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\EfCodeFirstService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\EfCodeFirstService.csproj",
+        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\EfCodeFirstService.csproj",
         "projectName": "EfCodeFirstService",
-        "projectPath": "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\EfCodeFirstService.csproj",
+        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\EfCodeFirstService.csproj",
         "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\obj\\",
+        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EfCodeFirstService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
