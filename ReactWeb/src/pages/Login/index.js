@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './index.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const app = {
     color: 'red'
@@ -22,9 +22,9 @@ const Login = () => {
                     <div className="button-container">
                         <button type="submit">登入</button>
                         <button>
-                            <Link to="/register">註冊</Link>
+                            註冊
+                            {/* <Link to="/register">註冊</Link> */}
                         </button>
-                        {/* <Link to="/register">註冊</Link> */}
                     </div>
                 </form>
             </div>
