@@ -11,3 +11,6 @@ SignalR
 MSSQL
 MongoDB
 Redis
+
+Oauth/openid
+azure b2c ad
