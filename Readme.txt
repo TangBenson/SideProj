@@ -11,6 +11,8 @@ SignalR
 MSSQL
 MongoDB
 Redis
+Go
+unit test
 
-Oauth/openid
+Oauth/openid/identity server4
 azure b2c ad

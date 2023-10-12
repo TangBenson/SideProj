@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {}
+    "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {
+    "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+        "projectUniqueName": "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
         "projectName": "RedisService",
-        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+        "projectPath": "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
         "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\obj\\",
+        "outputPath": "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",

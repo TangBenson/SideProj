@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IrnSXBeSAXDmWG9sOCAdlzFgDykBjzBBPTjs3gYF5bWkMVtkCs4uNtkVDfmii4aVSSTNUJKoDxdAqNQMdnzhFw==",
+  "dgSpecHash": "foJK82YprZOY31pmTgUEyFZAtEI0lEw0DA+V+iO9/yXD5KtZ+pPbQOi7hZFD0SQVpvwOIjabrndbu7mEEJc9jQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+  "projectFilePath": "c:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\benson922\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\benson922\\.nuget\\packages\\stackexchange.redis\\2.6.122\\stackexchange.redis.2.6.122.nupkg.sha512",
