@@ -1,0 +1,7 @@
+Header : token如何被產生，用哪種型態和演算法 => base64編碼
+Payload : token隱含的資訊，但不能有機敏資訊 => base64編碼
+Signature : Header+Payload+Secret做hash
+
+client端將jwt放localstorage不好
+jwt屬於無狀態驗證方式，意即不用連線資料庫就能驗證token
+authorization是用bearer

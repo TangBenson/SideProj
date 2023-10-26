@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EfCodeFirstService", "EfCodeFirstService\EfCodeFirstService.csproj", "{CA92A675-75FD-4A7E-948C-12BEEF3A7D40}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTGrpcService", "JWTGrpcService\JWTGrpcService.csproj", "{D29DC4D4-68C2-4525-8C68-5D907204DB91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWTService", "JWTService\JWTService.csproj", "{DB47C5E9-46FC-4978-B60B-0D73FC291802}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoginGrpcService", "LoginGrpcService\LoginGrpcService.csproj", "{8B0ED0A2-20E4-4456-A157-14DAFBAF9E44}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemDataService", "MemDataService\MemDataService.csproj", "{8A7645D8-BA07-43A0-9DAB-3BE4C1FB5B3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisService", "RedisService\RedisService.csproj", "{748B9DB5-78E4-4BA0-955E-A884A0B0C43C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA92A675-75FD-4A7E-948C-12BEEF3A7D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA92A675-75FD-4A7E-948C-12BEEF3A7D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA92A675-75FD-4A7E-948C-12BEEF3A7D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA92A675-75FD-4A7E-948C-12BEEF3A7D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29DC4D4-68C2-4525-8C68-5D907204DB91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29DC4D4-68C2-4525-8C68-5D907204DB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29DC4D4-68C2-4525-8C68-5D907204DB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29DC4D4-68C2-4525-8C68-5D907204DB91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB47C5E9-46FC-4978-B60B-0D73FC291802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB47C5E9-46FC-4978-B60B-0D73FC291802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB47C5E9-46FC-4978-B60B-0D73FC291802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB47C5E9-46FC-4978-B60B-0D73FC291802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B0ED0A2-20E4-4456-A157-14DAFBAF9E44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0ED0A2-20E4-4456-A157-14DAFBAF9E44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0ED0A2-20E4-4456-A157-14DAFBAF9E44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0ED0A2-20E4-4456-A157-14DAFBAF9E44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A7645D8-BA07-43A0-9DAB-3BE4C1FB5B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7645D8-BA07-43A0-9DAB-3BE4C1FB5B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7645D8-BA07-43A0-9DAB-3BE4C1FB5B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7645D8-BA07-43A0-9DAB-3BE4C1FB5B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{748B9DB5-78E4-4BA0-955E-A884A0B0C43C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748B9DB5-78E4-4BA0-955E-A884A0B0C43C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748B9DB5-78E4-4BA0-955E-A884A0B0C43C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748B9DB5-78E4-4BA0-955E-A884A0B0C43C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {324FF812-7FC1-4CC9-9653-375231D367BA}
+	EndGlobalSection
+EndGlobal

@@ -13,7 +13,10 @@ public class GreeterService : Greeter.GreeterBase
 
     public override Task<HelloReply> CheckLogin(HelloRequest request, ServerCallContext context)
     {
-        //呼叫jwt驗證
+        //驗證帳密
+
+        
+        //產生jwt
         
 
         return Task.FromResult(new HelloReply

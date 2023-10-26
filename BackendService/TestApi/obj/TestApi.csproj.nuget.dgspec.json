@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj": {}
+    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\TestApi\\TestApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj": {
+    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\TestApi\\TestApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj",
-        "projectName": "LoginGrpcService",
-        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj",
+        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\TestApi\\TestApi.csproj",
+        "projectName": "TestApi",
+        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\TestApi\\TestApi.csproj",
         "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\obj\\",
+        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\TestApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,12 +39,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Grpc.AspNetCore": {
-              "target": "Package",
-              "version": "[2.49.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -58,9 +51,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
