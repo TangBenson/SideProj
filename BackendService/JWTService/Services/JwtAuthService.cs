@@ -35,7 +35,7 @@ public class JwtAuthService : IJwtAuthService
             SecurityTokenDescriptor tokenDescriptor = new()
             {
                 // Nbf 預設此時此刻
-                // Iat 預設此時此刻
+                // Iat是Token簽發時間，預設此時此刻
                 Issuer = _jwtconfig.Issuer, // 設置發行者資訊
                 Subject = new ClaimsIdentity(new[]
                 {
@@ -53,13 +53,13 @@ public class JwtAuthService : IJwtAuthService
             //寫入資料庫
             Console.WriteLine($"Account:{issuer}");
             Console.WriteLine($"Token:{jwtToken}");
-            Console.WriteLine($"RefreshToken:");
+            Console.WriteLine($"RefreshToken:xxxxxxx");
 
             return new AuthResult()
             {
                 JwtToken = jwtToken,
                 Result = true,
-                RefreshToken = ""
+                RefreshToken = "xxxxxxx"
             };
         }
         catch (Exception ex)
