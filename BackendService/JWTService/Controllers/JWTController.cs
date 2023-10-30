@@ -70,17 +70,17 @@ namespace JWTService.Controllers
         #endregion
 
         #region JwtAuthService用的
-        [HttpGet(Name = "GetToken")]
-        public AuthResult Get2(string account)
+        [HttpPut(Name = "CreateToken")]
+        public AuthResult Put(string account,string email)
         {
-            return _jwt.CreateJWT(account);
+            return _jwt.GenerateJwtToken(account,email);
         }
 
         [HttpPost]
         // [Authorize] //限制呼叫時須透過驗證機制,如果沒有通過權限校驗,則http返回狀態碼爲401
-        public bool TestAuthorize(TokenRequest tokenRequest)
+        public AuthResult VerifyAuthorize(TokenRequest tokenRequest)
         {
-            Console.WriteLine(tokenRequest.JwtToken);
+            Console.WriteLine(tokenRequest.AccessToken);
             return _jwt.VerifyAndGenerateToken(tokenRequest);
         }
 

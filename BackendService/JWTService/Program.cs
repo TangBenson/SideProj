@@ -37,24 +37,32 @@ config和httpcontext會自動注入給所有程式,這段是.net自動加的。�
 #region JwtAuthService用的(https://medium.com/selectprogram/asp-net-core%E4%BD%BF%E7%94%A8jwt%E9%A9%97%E8%AD%89-1b0609e6e8e3)
 builder.Services.AddSingleton<IJwtAuthService, JwtAuthService>();
 builder.Services.Configure<JWTConfig>(builder.Configuration.GetSection("JwtSettings"));//將"class JwtConfig"中的"Secret"賦值為"appsettings.json"中的"JwtConfig"
+//建立TokenValidationParameters，用來驗證客戶端傳過來的token是否合法
 TokenValidationParameters tokenValidationParams = new()
-    {
-        RequireExpirationTime = false,
-        ValidateIssuer = false,
-        ValidateAudience = false,
+{
+    RequireExpirationTime = false,
+    // 保哥:一般我們都會驗證 Issuer
+    ValidateIssuer = true,
+    ValidIssuer = builder.Configuration.GetValue<string>("JwtSettings:Issuer"),
+    
+    // 保哥:通常不太需要驗證 Audience
+    ValidateAudience = false,
+    //ValidAudience = "xxxxxx", // 不驗證就不需要填寫
 
-        //驗證IssuerSigningKey
-        ValidateIssuerSigningKey = true,
-        //以JwtConfig:Secret為Key,做為Jwt加密
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration.GetSection("JwtSettings").GetValue<string>("SignKey"))),
+    //驗證IssuerSigningKey，如果 Token 中包含 key 才需要驗證，一般都只有簽章而已
+    ValidateIssuerSigningKey = false,
+    //以JwtConfig:Secret為Key,做為Jwt加密
+    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration.GetSection("JwtSettings").GetValue<string>("SignKey")!)),
 
-        //驗證時效
-        ValidateLifetime = true,
+    //驗證時效
+    ValidateLifetime = true,
 
-        //設定token的過期時間可以以秒來計算,當token的過期時間低於五分鐘時使用。
-        ClockSkew = TimeSpan.Zero
-    };
-builder.Services.AddSingleton(tokenValidationParams); //註冊tokenValidationParams,後續可以注入使用。
+    //設定token的過期時間可以以秒來計算,當token的過期時間低於五分鐘時使用。
+    ClockSkew = TimeSpan.Zero
+};
+//註冊tokenValidationParams,後續可以注入使用。
+builder.Services.AddSingleton(tokenValidationParams);
+//AddAuthentication註冊驗證的服務，並設定JWT的驗證配置
 builder.Services.AddAuthentication(options =>
     {
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -114,6 +122,7 @@ app.MapGet("/", () => "Hello from .Net 7 API!");
 
 // app.UseHttpsRedirection(); //會把http導向https,但我家裡電腦好像有問題
 
+// UseAuthorization授權之前加入UseAuthentication識別身分。這樣才能在授權之前，先驗證是否為有效的身分
 // 識別身分,需加在UseAuthorization之前。要包在app.UseRouting()跟app.UseEndpoints中間..(為何我沒有?)。
 // 這個會跟Action上方Tag[Authorize]與[AllowAnonymous]有關
 app.UseAuthentication();

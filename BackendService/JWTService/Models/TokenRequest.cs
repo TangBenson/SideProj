@@ -7,7 +7,7 @@ namespace JWTService.Models
 {
     public class TokenRequest
     {
-        public string JwtToken { set; get; } = "";
+        public string AccessToken { set; get; } = "";
 
         public string RefreshToken { set; get; } = "";
     }
