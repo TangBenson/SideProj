@@ -24,7 +24,7 @@ namespace EfCodeFirstService.DbConnect
         {
             // base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Car>().HasKey(o => o.CarNo);
-            modelBuilder.Entity<Token>().HasKey(o => o.ID);
+            modelBuilder.Entity<Token>().HasKey(o => o.Account);
             modelBuilder.Entity<MemberData>().HasKey(o => o.ID);
         }
     }

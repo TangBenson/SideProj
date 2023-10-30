@@ -53,7 +53,7 @@ public class JwtAuthService : IJwtAuthService
                 Account = issuer,
                 AccessToken = jwtToken,
                 RefreshToken = DateTime.Now.ToString(),
-                Exp = exp
+                ExpireTime = exp
             };
 
             //寫入資料庫

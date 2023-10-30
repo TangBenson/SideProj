@@ -13,10 +13,11 @@ public class InserDataController : ControllerBase
     {
         _context = context;
     }
+    // 新增
+    [HttpPost]
     public bool PostUserToken(Token tokenData){
-        Token token =new(){
-            
-        };
+        _context.jwttoken.Add(tokenData);
+        _context.SaveChangesAsync();
         return true;
     }
     // public async Task PushAsync()

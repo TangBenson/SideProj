@@ -8,7 +8,7 @@ namespace JWTService.Models
     public class UserToken : TokenRequest
     {
         public string Account { set; get; } = "";
-        public DateTime Exp { set; get; }
+        public DateTime ExpireTime { set; get; }
 
     }
 }

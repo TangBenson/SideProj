@@ -7,7 +7,7 @@ namespace EfCodeFirstService.Models;
 
 public class Token
 {
-    public string ID { get; set; } = "";
+    public string Account { get; set; } = "";
     public string AccessToken { get; set; } = "";
     public string RefreshTokeno { get; set; } = "";
     public DateTime ExpireTime { get; set; }
