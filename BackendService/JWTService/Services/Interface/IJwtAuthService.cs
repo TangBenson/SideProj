@@ -12,6 +12,6 @@ namespace JWTService.Services.Interface
             string issuer,
             string mail
         );
-        AuthResult VerifyAndGenerateToken(TokenRequest tokenRequest);
+        AuthResult VerifyAndGenerateToken(TokenVerify tokenRequest);
     }
 }

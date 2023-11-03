@@ -1,8 +1,10 @@
 using System.Text;
+using EFCoreService.DbConnect;
 using JWTService.Models;
 using JWTService.Services;
 using JWTService.Services.Interface;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,11 @@ builder.Services.AddControllers();
 builder.Services.AddHttpContextAccessor();
 // builder.Services.AddEndpointsApiExplorer();
 // builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConStr"));
+});
 
 #region 測試一些取值,與jwt無關
 // builder.Services.Configure<JWTConfig>(builder.Configuration.GetSection("JwtSettings"));//將"class JwtConfig"中的"Secret"賦值為"appsettings.json"中的"JwtConfig"
@@ -34,7 +41,7 @@ config和httpcontext會自動注入給所有程式,這段是.net自動加的。�
 // });
 #endregion
 
-#region JwtAuthService用的(https://medium.com/selectprogram/asp-net-core%E4%BD%BF%E7%94%A8jwt%E9%A9%97%E8%AD%89-1b0609e6e8e3)
+#region JwtAuthService用的 (https://medium.com/selectprogram/asp-net-core%E4%BD%BF%E7%94%A8jwt%E9%A9%97%E8%AD%89-1b0609e6e8e3)
 builder.Services.AddSingleton<IJwtAuthService, JwtAuthService>();
 builder.Services.Configure<JWTConfig>(builder.Configuration.GetSection("JwtSettings"));//將"class JwtConfig"中的"Secret"賦值為"appsettings.json"中的"JwtConfig"
 //建立TokenValidationParameters，用來驗證客戶端傳過來的token是否合法

@@ -1,0 +1,14 @@
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\bin\Debug\net7.0\EFCoreService.deps.json
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\bin\Debug\net7.0\EFCoreService.runtimeconfig.json
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\bin\Debug\net7.0\EFCoreService.dll
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\bin\Debug\net7.0\EFCoreService.pdb
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\obj\Debug\net7.0\EFCoreService.csproj.AssemblyReference.cache
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\obj\Debug\net7.0\EFCoreService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\obj\Debug\net7.0\EFCoreService.AssemblyInfoInputs.cache
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\obj\Debug\net7.0\EFCoreService.AssemblyInfo.cs
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\obj\Debug\net7.0\EFCoreService.csproj.CoreCompileInputs.cache
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\obj\Debug\net7.0\EFCoreService.dll
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\obj\Debug\net7.0\refint\EFCoreService.dll
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\obj\Debug\net7.0\EFCoreService.pdb
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\obj\Debug\net7.0\EFCoreService.genruntimeconfig.cache
+C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\obj\Debug\net7.0\ref\EFCoreService.dll

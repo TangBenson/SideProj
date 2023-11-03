@@ -1,6 +1,8 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using EFCoreService.DbConnect;
+using EFCoreService.Models;
 using JWTService.Models;
 using JWTService.Services.Interface;
 using Microsoft.Extensions.Options;
@@ -12,14 +14,16 @@ public class JwtAuthService : IJwtAuthService
 {
     private readonly JWTConfig _jwtconfig;
     private readonly TokenValidationParameters _tokenValidationParams;
-    public JwtAuthService(IOptionsMonitor<JWTConfig> option, TokenValidationParameters tokenValidationParams)
+    private readonly AppDbContext _context;
+    public JwtAuthService(IOptionsMonitor<JWTConfig> option, TokenValidationParameters tokenValidationParams, AppDbContext context)
     {
         // 發現有些人不喜歡注入iconfig，而是用這種方式
         _jwtconfig = option.CurrentValue;
         _tokenValidationParams = tokenValidationParams;
+        _context = context;
     }
 
-    public AuthResult GenerateJwtToken(string issuer,string mail)
+    public AuthResult GenerateJwtToken(string issuer, string mail)
     {
         try
         {
@@ -48,24 +52,34 @@ public class JwtAuthService : IJwtAuthService
             string jwtToken = jwtTokenHandler.WriteToken(token);//token序列化為字串
             #endregion
 
-            UserToken userToken = new()
+            Token userToken = new()
             {
                 Account = issuer,
                 AccessToken = jwtToken,
-                RefreshToken = DateTime.Now.ToString(),
+                RefreshTokeno = DateTime.Now.ToString(),
                 ExpireTime = exp
             };
 
             //寫入資料庫
-            Console.WriteLine($"Account:{userToken.Account}");
-            Console.WriteLine($"Token:{userToken.AccessToken}");
-            Console.WriteLine($"RefreshToken:{userToken.RefreshToken}");
+            if (_context.jwttoken.Where(x => x.Account == issuer).Any())
+            {
+                _context.jwttoken.Update(userToken);
+                _context.SaveChangesAsync();
+            }
+            else
+            {
+                _context.jwttoken.Add(userToken);
+                _context.SaveChangesAsync();
+            }
+            // Console.WriteLine($"Account:{userToken.Account}");
+            // Console.WriteLine($"Token:{userToken.AccessToken}");
+            // Console.WriteLine($"RefreshToken:{userToken.RefreshTokeno}");
 
             return new AuthResult()
             {
                 AccessToken = userToken.AccessToken,
                 Result = true,
-                RefreshToken = userToken.RefreshToken
+                RefreshTokeno = userToken.RefreshTokeno
             };
         }
         catch (Exception ex)
@@ -74,14 +88,14 @@ public class JwtAuthService : IJwtAuthService
             {
                 AccessToken = ex.ToString(),
                 Result = false,
-                RefreshToken = "你他媽沒拿到token啦"
+                RefreshTokeno = "你他媽沒拿到token啦"
             };
         }
     }
     /// <summary>
     /// 驗證Token，並重新產生Token
     /// </summary>
-    public AuthResult VerifyAndGenerateToken(TokenRequest tokenRequest)
+    public AuthResult VerifyAndGenerateToken(TokenVerify tokenRequest)
     {
         //建立JwtSecurityTokenHandler
         JwtSecurityTokenHandler jwtTokenHandler = new();
@@ -104,13 +118,13 @@ public class JwtAuthService : IJwtAuthService
             }
 
             //依參數的RefreshToken，查詢UserToken資料表中的資料
-            UserToken storedRefreshToken = _context.UserTokens.Where(x => x.RefreshToken == tokenRequest.RefreshToken).FirstOrDefault();
+            Token storedRefreshToken = _context.jwttoken.Where(x => x.RefreshTokeno == tokenRequest.RefreshTokeno).FirstOrDefault();
 
             if (storedRefreshToken == null)
             {
                 return new AuthResult()
                 {
-                    RefreshToken = "Refresh Token不存在",
+                    RefreshTokeno = "Refresh Token不存在",
                     Result = false
                 };
             }
@@ -123,17 +137,17 @@ public class JwtAuthService : IJwtAuthService
             {
                 return new AuthResult()
                 {
-                    RefreshToken = "Token驗證失敗" ,
+                    RefreshTokeno = "Token驗證失敗",
                     Result = false
                 };
             }
 
             //依storedRefreshToken的Account，查詢出DB的User資料
-            string account = _context.Users.Where(u => u.Account == storedRefreshToken.Account).FirstOrDefault();
-            string mail = _context.Users.Where(u => u.Account == storedRefreshToken.Account).FirstOrDefault();
+            string account = _context.member.Where(u => u.ID == storedRefreshToken.Account).Select(u => u.ID).FirstOrDefault();
+            string mail = _context.member.Where(u => u.ID == storedRefreshToken.Account).Select(u => u.Email).FirstOrDefault();
 
             //產生Jwt Token
-            return GenerateJwtToken(account,mail);
+            return GenerateJwtToken(account, mail);
         }
         catch (Exception ex)
         {
@@ -142,7 +156,7 @@ public class JwtAuthService : IJwtAuthService
             {
                 Result = false,
                 AccessToken = "",
-                RefreshToken = ""
+                RefreshTokeno = ""
             };
         }
     }

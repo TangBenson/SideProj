@@ -78,7 +78,7 @@ namespace JWTService.Controllers
 
         [HttpPost]
         // [Authorize] //限制呼叫時須透過驗證機制,如果沒有通過權限校驗,則http返回狀態碼爲401
-        public AuthResult VerifyAuthorize(TokenRequest tokenRequest)
+        public AuthResult VerifyAuthorize(TokenVerify tokenRequest)
         {
             Console.WriteLine(tokenRequest.AccessToken);
             return _jwt.VerifyAndGenerateToken(tokenRequest);
