@@ -1,34 +1,109 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj": {}
+    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj": {
+    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj",
-        "projectName": "LoginGrpcService",
-        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj",
-        "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\obj\\",
+        "projectUniqueName": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
+        "projectName": "EFCoreService",
+        "projectPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
+        "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj",
+        "projectName": "LoginGrpcService",
+        "projectPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj",
+        "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\LoginGrpcService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
+                "projectPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

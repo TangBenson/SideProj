@@ -7,18 +7,23 @@ package greet;
 // The greeting service definition.
 service Greeter {
   // Sends a greeting
-  rpc CheckLogin (HelloRequest) returns (HelloReply);
+  rpc CreateAccount (HelloRequest) returns (CreateReply);
+  rpc CheckLogin (HelloRequest) returns (CheckReply);
 }
 
 // The request message containing the user's name.
 message HelloRequest {
-  string acount = 1; //順序第一位
+  string account = 1; //順序第一位
   string pavvd = 2;
 }
 
 // The response message containing the greetings.
-message HelloReply {
+message CheckReply {
   string endmsg = 1;
   string accessToken = 2;
   string refreshToken = 3;
+}
+
+message CreateReply {
+  string result = 1;
 }
