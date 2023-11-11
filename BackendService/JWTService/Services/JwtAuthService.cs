@@ -23,7 +23,7 @@ public class JwtAuthService : IJwtAuthService
         _context = context;
     }
 
-    public AuthResult GenerateJwtToken(string issuer, string mail)
+    public async Task<AuthResult> GenerateJwtToken(string issuer, string mail)
     {
         try
         {
@@ -64,12 +64,12 @@ public class JwtAuthService : IJwtAuthService
             if (_context.Jwttoken.Where(x => x.Account == issuer).Any())
             {
                 _context.Jwttoken.Update(userToken);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
             else
             {
                 _context.Jwttoken.Add(userToken);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
             // Console.WriteLine($"Account:{userToken.Account}");
             // Console.WriteLine($"Token:{userToken.AccessToken}");
@@ -95,7 +95,7 @@ public class JwtAuthService : IJwtAuthService
     /// <summary>
     /// 驗證Token，並重新產生Token
     /// </summary>
-    public AuthResult VerifyAndGenerateToken(TokenVerify tokenRequest)
+    public async Task<AuthResult> VerifyAndGenerateToken(TokenVerify tokenRequest)
     {
         //建立JwtSecurityTokenHandler
         JwtSecurityTokenHandler jwtTokenHandler = new();
@@ -147,7 +147,7 @@ public class JwtAuthService : IJwtAuthService
             string mail = _context.Member.Where(u => u.ID == storedRefreshToken.Account).Select(u => u.Email).FirstOrDefault();
 
             //產生Jwt Token
-            return GenerateJwtToken(account, mail);
+            return await GenerateJwtToken(account, mail);
         }
         catch (Exception ex)
         {

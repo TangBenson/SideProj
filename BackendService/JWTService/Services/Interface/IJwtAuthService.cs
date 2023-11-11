@@ -8,10 +8,10 @@ namespace JWTService.Services.Interface
 {
     public interface IJwtAuthService
     {
-        AuthResult GenerateJwtToken(
+        Task<AuthResult> GenerateJwtToken(
             string issuer,
             string mail
         );
-        AuthResult VerifyAndGenerateToken(TokenVerify tokenRequest);
+        Task<AuthResult> VerifyAndGenerateToken(TokenVerify tokenRequest);
     }
 }
