@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {}
+    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
+    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
+        "projectUniqueName": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
         "projectName": "EFCoreService",
-        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
-        "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\obj\\",
+        "projectPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
+        "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +47,14 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.13, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -67,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.308\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace JWTService.Models
 {
+    //驗證 token時傳入的內容
     public class TokenVerify
     {
         public string AccessToken { set; get; } = "";

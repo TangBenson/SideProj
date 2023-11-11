@@ -70,8 +70,8 @@ namespace JWTService.Controllers
         #endregion
 
         #region JwtAuthService用的
-        [HttpPut(Name = "CreateToken")]
-        public AuthResult Put(string account,string email)
+        [HttpGet(Name = "CreateToken")]
+        public AuthResult GetTk(string account,string email)
         {
             return _jwt.GenerateJwtToken(account,email);
         }

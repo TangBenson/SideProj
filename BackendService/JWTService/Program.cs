@@ -19,6 +19,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlConStr"));
 });
+// builder.Services.AddDbContext<AppDbContext>();
 
 #region 測試一些取值,與jwt無關
 // builder.Services.Configure<JWTConfig>(builder.Configuration.GetSection("JwtSettings"));//將"class JwtConfig"中的"Secret"賦值為"appsettings.json"中的"JwtConfig"
@@ -42,7 +43,7 @@ config和httpcontext會自動注入給所有程式,這段是.net自動加的。�
 #endregion
 
 #region JwtAuthService用的 (https://medium.com/selectprogram/asp-net-core%E4%BD%BF%E7%94%A8jwt%E9%A9%97%E8%AD%89-1b0609e6e8e3)
-builder.Services.AddSingleton<IJwtAuthService, JwtAuthService>();
+builder.Services.AddScoped<IJwtAuthService, JwtAuthService>(); //用AddSingleton會和efcore衝突,因為efcore是scoped
 builder.Services.Configure<JWTConfig>(builder.Configuration.GetSection("JwtSettings"));//將"class JwtConfig"中的"Secret"賦值為"appsettings.json"中的"JwtConfig"
 //建立TokenValidationParameters，用來驗證客戶端傳過來的token是否合法
 TokenValidationParameters tokenValidationParams = new()

@@ -61,14 +61,14 @@ public class JwtAuthService : IJwtAuthService
             };
 
             //寫入資料庫
-            if (_context.jwttoken.Where(x => x.Account == issuer).Any())
+            if (_context.Jwttoken.Where(x => x.Account == issuer).Any())
             {
-                _context.jwttoken.Update(userToken);
+                _context.Jwttoken.Update(userToken);
                 _context.SaveChangesAsync();
             }
             else
             {
-                _context.jwttoken.Add(userToken);
+                _context.Jwttoken.Add(userToken);
                 _context.SaveChangesAsync();
             }
             // Console.WriteLine($"Account:{userToken.Account}");
@@ -118,7 +118,7 @@ public class JwtAuthService : IJwtAuthService
             }
 
             //依參數的RefreshToken，查詢UserToken資料表中的資料
-            Token storedRefreshToken = _context.jwttoken.Where(x => x.RefreshTokeno == tokenRequest.RefreshTokeno).FirstOrDefault();
+            Token storedRefreshToken = _context.Jwttoken.Where(x => x.RefreshTokeno == tokenRequest.RefreshTokeno).FirstOrDefault();
 
             if (storedRefreshToken == null)
             {
@@ -143,8 +143,8 @@ public class JwtAuthService : IJwtAuthService
             }
 
             //依storedRefreshToken的Account，查詢出DB的User資料
-            string account = _context.member.Where(u => u.ID == storedRefreshToken.Account).Select(u => u.ID).FirstOrDefault();
-            string mail = _context.member.Where(u => u.ID == storedRefreshToken.Account).Select(u => u.Email).FirstOrDefault();
+            string account = _context.Member.Where(u => u.ID == storedRefreshToken.Account).Select(u => u.ID).FirstOrDefault();
+            string mail = _context.Member.Where(u => u.ID == storedRefreshToken.Account).Select(u => u.Email).FirstOrDefault();
 
             //產生Jwt Token
             return GenerateJwtToken(account, mail);

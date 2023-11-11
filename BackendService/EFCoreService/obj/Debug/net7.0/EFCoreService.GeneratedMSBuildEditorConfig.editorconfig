@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EFCoreService
-build_property.ProjectDir = C:\Users\benson922\Documents\sideproj\SideProj-FourSeasonRiver\BackendService\EFCoreService\
+build_property.ProjectDir = C:\Users\benso\Documents\dotnetProject\FourSeasonRiver\BackendService\EFCoreService\
