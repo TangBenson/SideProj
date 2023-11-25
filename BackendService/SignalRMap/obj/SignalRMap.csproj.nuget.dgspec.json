@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\SignalRMap\\SignalRMap.csproj": {}
+    "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\SignalRMap\\SignalRMap.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\SignalRMap\\SignalRMap.csproj": {
+    "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\SignalRMap\\SignalRMap.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\SignalRMap\\SignalRMap.csproj",
+        "projectUniqueName": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\SignalRMap\\SignalRMap.csproj",
         "projectName": "SignalRMap",
-        "projectPath": "C:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\SignalRMap\\SignalRMap.csproj",
+        "projectPath": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\SignalRMap\\SignalRMap.csproj",
         "packagesPath": "C:\\Users\\nerod\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\SignalRMap\\obj\\",
+        "outputPath": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\SignalRMap\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nerod\\AppData\\Roaming\\NuGet\\NuGet.Config"
