@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {}
+    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {
+    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+        "projectUniqueName": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
         "projectName": "RedisService",
-        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
-        "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\obj\\",
+        "projectPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+        "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

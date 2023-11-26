@@ -8,6 +8,6 @@ namespace MemDataService.Services
 {
     public interface IGetDataService
     {
-        List<MortorData> GetUserData();
+        MemberData GetUserData();
     }
 }

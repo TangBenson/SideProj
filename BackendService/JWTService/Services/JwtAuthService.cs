@@ -74,6 +74,7 @@ public class JwtAuthService : IJwtAuthService
             // Console.WriteLine($"Account:{userToken.Account}");
             // Console.WriteLine($"Token:{userToken.AccessToken}");
             // Console.WriteLine($"RefreshToken:{userToken.RefreshTokeno}");
+            Console.WriteLine("a");
 
             return new AuthResult()
             {
@@ -84,6 +85,7 @@ public class JwtAuthService : IJwtAuthService
         }
         catch (Exception ex)
         {
+            Console.WriteLine("a");
             return new AuthResult()
             {
                 AccessToken = ex.ToString(),
@@ -118,7 +120,7 @@ public class JwtAuthService : IJwtAuthService
             }
 
             //依參數的RefreshToken，查詢UserToken資料表中的資料
-            Token storedRefreshToken = _context.Jwttoken.Where(x => x.RefreshTokeno == tokenRequest.RefreshTokeno).FirstOrDefault();
+            Token storedRefreshToken = _context.Jwttoken.Where(x => x.RefreshTokeno == tokenRequest.RefreshTokeno).FirstOrDefault()!;
 
             if (storedRefreshToken == null)
             {
