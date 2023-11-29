@@ -13,11 +13,13 @@ const AnyReactComponent = ({ text }) => (
     borderRadius: '100%',
     transform: 'translate(-50%, -50%)'
   }}>
-    <img src="../../../OIP.jpg" alt={text} />
+    <img src="/OIP.jpg" alt={text} />
     {/* <div>{text}</div> */}
   </div>
 );
 
+var a = 0;
+var b = 0;
 const Map = () => {
 
   const defaultProps = {
@@ -28,18 +30,33 @@ const Map = () => {
     zoom: 15
   };
 
-  const markers = [
-    { lat: 23.987030325794812, lng: 121.58808635961898, text: 'car1' },
-    { lat: 23.983388883570274, lng: 121.589409906775, text: 'car2' },
+  const [markers, setMarkers] = useState([
+    { lat: 23.987030325794812, lng: 121.58808635961898, text: 5 },
+    { lat: 23.983388883570274, lng: 121.589409906775, text: 5 },
     // 添加更多的標記...
-  ];
-  
+  ]);
+
   const [mapState, setMapState] = useState(defaultProps);
 
   const handleMapChange = (newMapState) => {
-    setMapState(newMapState);
-    console.log('dddd');
+    // console.log(newMapState);
+    // console.log(mapState);
+    setMapState({
+      center: newMapState.center,
+      zoom: newMapState.zoom
+    });
   };
+
+  useEffect(() => {
+    console.log(a, b);
+    console.log("---------------");
+    console.log(markers[0].text, markers[1].text);
+    // 在地图状态变化时更新标记
+    setMarkers([
+      { lat: 23.987030325794812, lng: 121.58808635961898, text: a++ },
+      { lat: 23.983388883570274, lng: 121.589409906775, text: b++ }
+    ]);
+  }, [mapState]);
 
   return (
     // Important! Always set the container height explicitly
@@ -50,7 +67,6 @@ const Map = () => {
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
         onChange={handleMapChange}
-        // onDrag={handleMapChange}
         options={{
           disableDefaultUI: true
         }}
@@ -61,21 +77,8 @@ const Map = () => {
             lat={marker.lat}
             lng={marker.lng}
             text={marker.text}
-            onClick={() => console.log(marker.text)}
           />
         ))}
-        {/* <AnyReactComponent
-          lat={23.987030325794812}
-          lng={121.58808635961898}
-          text="car1"
-          onClick={() => console.log("car1")}
-        />
-        <AnyReactComponent
-          lat={23.983388883570274}
-          lng={121.589409906775}
-          text="car2"
-          onClick={() => console.log("car2")}
-        /> */}
       </GoogleMapReact>
     </div>
   );
