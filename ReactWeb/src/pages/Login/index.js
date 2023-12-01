@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './index.css';
 import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
@@ -8,6 +8,7 @@ const app = {
 }
 
 const Login = () => {
+    console.log("345");
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -15,6 +16,10 @@ const Login = () => {
         // 處理登入邏輯，成功後導向地圖頁面，Call API for authentication
         console.log('handleLogin');
     };
+
+    useEffect(() => {
+        console.log("-----");
+    }, []);
 
     return (
         <div className="login-page">

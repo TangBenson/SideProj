@@ -8,11 +8,10 @@ import {
 import carLocationIcon from './location.svg';
 
 export default function Map() {
+  console.log("123");
   const center = { lat: 23.9861321, lng: 121.5907741 };
-  const carList = [
-    { CarNo: "AAA-1234", CID: "", Latitude: 23.98703, Longitude: 121.58808 },
-    { CarNo: "BBB-4321", CID: "", Latitude: 23.98338, Longitude: 121.58940 },
-  ];
+  const [carList, setCarList] = useState([]);
+
   const [hoveredCarIndex, setHoveredCarIndex] = useState(-1);
   const zoom = 15;
 
@@ -21,6 +20,14 @@ export default function Map() {
     scaledSize: { width: 75, height: 105 },
     labelOrigin: { x: 37, y: 85 },
   };
+
+  useEffect(() => {
+    console.log("-----");
+    setCarList([
+      { CarNo: "AAA-1234", CID: "", Latitude: 23.98703, Longitude: 121.58808 },
+      { CarNo: "BBB-4321", CID: "", Latitude: 23.98338, Longitude: 121.58940 }
+    ])
+  }, []);
 
   return (
     <div className="main-container">
@@ -46,19 +53,19 @@ export default function Map() {
               title={item.CarNo}
               icon={markerIcon}
               label={item.CarNo}
-            onMouseOver={() => {
-              setHoveredCarIndex(index);
-            }}
-            onMouseOut={() => {
-              setHoveredCarIndex(-1);
-            }}
+              onMouseOver={() => {
+                setHoveredCarIndex(index);
+              }}
+              onMouseOut={() => {
+                setHoveredCarIndex(-1);
+              }}
             >
               {hoveredCarIndex === index ? (
                 <InfoWindow
-                  // position={{
-                  //   lat: parseFloat(item.Latitude),
-                  //   lng: parseFloat(item.Longitude),
-                  // }}
+                // position={{
+                //   lat: parseFloat(item.Latitude),
+                //   lng: parseFloat(item.Longitude),
+                // }}
                 >
                   <div>
                     {'VehicleMonitoringMap.searchBar.車號'}
