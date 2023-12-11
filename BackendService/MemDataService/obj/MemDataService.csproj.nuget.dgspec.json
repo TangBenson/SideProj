@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj": {}
+    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
+    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
+        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
         "projectName": "EFCoreService",
-        "projectPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
-        "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\obj\\",
+        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
+        "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,38 +75,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj": {
+    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj",
+        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj",
         "projectName": "MemDataService",
-        "projectPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj",
-        "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\MemDataService\\obj\\",
+        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\MemDataService\\MemDataService.csproj",
+        "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\MemDataService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.311\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
-                "projectPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj"
+              "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
+                "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj"
               },
-              "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {
-                "projectPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj"
+              "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {
+                "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj"
               }
             }
           }
@@ -151,26 +155,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {
+    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
         "projectName": "RedisService",
-        "projectPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
-        "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\obj\\",
+        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+        "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -210,7 +216,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
         }
       }
     }

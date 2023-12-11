@@ -1,6 +1,5 @@
 using EFCoreService.DbConnect;
 using LoginGrpcService.Services;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 

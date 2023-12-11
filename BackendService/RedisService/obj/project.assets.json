@@ -127,24 +127,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\benso\\.nuget\\packages\\": {}
+    "C:\\Users\\benson922\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+      "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
       "projectName": "RedisService",
-      "projectPath": "c:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
-      "packagesPath": "C:\\Users\\benso\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\benso\\Documents\\dotnetProject\\FourSeasonRiver\\BackendService\\RedisService\\obj\\",
+      "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+      "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\benso\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -184,7 +186,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
       }
     }
   }
