@@ -14,7 +14,10 @@ namespace MemDataService.Services
         private readonly AppDbContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly TokenValidationParameters _tokenValidationParams;
-        public GetDataService(IHttpContextAccessor httpContextAccessor, AppDbContext context, TokenValidationParameters tokenValidationParams)
+        public GetDataService(
+            IHttpContextAccessor httpContextAccessor,
+            AppDbContext context,
+            TokenValidationParameters tokenValidationParams)
         {
             _httpContextAccessor = httpContextAccessor;
             _context = context;
@@ -35,10 +38,14 @@ namespace MemDataService.Services
             JwtSecurityTokenHandler jwtTokenHandler = new();
             
             //驗證參數的Token，回傳SecurityToken
-            ClaimsPrincipal tokenInVerification = jwtTokenHandler.ValidateToken(Access_Token_string, _tokenValidationParams, out SecurityToken validatedToken);
+            ClaimsPrincipal tokenInVerification = jwtTokenHandler.ValidateToken(
+                Access_Token_string,
+                _tokenValidationParams,
+                out SecurityToken validatedToken);
 
             //取Token Claims中的Iss(產生token時定義為Account)
-            string issuer = tokenInVerification.Claims?.SingleOrDefault(x => x.Type == JwtRegisteredClaimNames.Iss)!.Value!;
+            string issuer = tokenInVerification.Claims?.SingleOrDefault(
+                x => x.Type == JwtRegisteredClaimNames.Iss)!.Value!;
             #endregion
 
             #region Redis獲取資訊
