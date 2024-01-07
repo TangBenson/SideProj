@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/tBGL40FoHBkYQJJQOxgxfCJuUr7HA5aWctTw08f1QE=",
+  "Source": "OauthService",
+  "BasePath": "_content/OauthService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
