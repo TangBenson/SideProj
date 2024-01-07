@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './index.css';
 import { Link } from 'react-router-dom';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
+import jwt_decode from 'jwt-decode'
 
 
 const app = {
@@ -17,9 +18,10 @@ const Login = () => {
         console.log("-----");
     }, []);
 
-    const handleGoogleLogin = (response) => {
+    const handleGoogleLogin = (credentialResponse) => {
         // 若是imloict模式則要在此处理登录逻辑，例如发送令牌到后端进行验证
-        console.log(response);
+        var decode = jwt_decode(credentialResponse.credential)
+        console.log(decode);
     };
 
     return (
@@ -32,7 +34,7 @@ const Login = () => {
                         <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
                         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
                         <div className="button-container">
-                            <button>
+                            <button style={app}>
                                 <Link to="/map">登入</Link>
                             </button>
                             <button>
@@ -42,10 +44,7 @@ const Login = () => {
                             <GoogleLogin
                                 onSuccess={handleGoogleLogin}
                                 onError={() => console.log('Login Failed')}
-                                scope="profile email"
-                                render={renderProps => (
-                                    <button style={app} onClick={renderProps.onClick} disabled={renderProps.disabled}>OAuth</button>
-                                )}
+                            // scope="profile email"
                             />
                         </div>
                     </form>
