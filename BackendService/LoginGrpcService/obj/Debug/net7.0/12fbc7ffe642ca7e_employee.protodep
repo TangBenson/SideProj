@@ -1,2 +1,0 @@
-obj\Debug\net7.0\Protos/Employee.cs \
-obj\Debug\net7.0\Protos/EmployeeGrpc.cs: Protos/employee.proto
