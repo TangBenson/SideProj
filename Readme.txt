@@ -13,6 +13,4 @@ MongoDB
 Redis
 Go
 unit test
-
-Oauth/openid/identity server4
-azure b2c ad
+Oauth2.0
