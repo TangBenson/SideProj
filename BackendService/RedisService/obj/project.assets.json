@@ -127,26 +127,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\benson922\\.nuget\\packages\\": {}
+    "C:\\Users\\nerod\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+      "projectUniqueName": "C:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
       "projectName": "RedisService",
-      "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
-      "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\obj\\",
+      "projectPath": "C:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+      "packagesPath": "C:\\Users\\nerod\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\nerod\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -186,7 +184,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

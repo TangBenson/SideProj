@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj": {}
+    "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
+    "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
+        "projectUniqueName": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
         "projectName": "EFCoreService",
-        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
-        "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\obj\\",
+        "projectPath": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj",
+        "packagesPath": "C:\\Users\\nerod\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\nerod\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -75,37 +73,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj": {
+    "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj",
+        "projectUniqueName": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj",
         "projectName": "LoginGrpcService",
-        "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj",
-        "packagesPath": "C:\\Users\\benson922\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\obj\\",
+        "projectPath": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\LoginGrpcService.csproj",
+        "packagesPath": "C:\\Users\\nerod\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\LoginGrpcService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\benson922\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\nerod\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.311\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
-                "projectPath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj"
+              "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj": {
+                "projectPath": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\EFCoreService\\EFCoreService.csproj"
               }
             }
           }
@@ -144,7 +139,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.311\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

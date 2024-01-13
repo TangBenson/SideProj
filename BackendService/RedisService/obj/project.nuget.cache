@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YB6egG3dr7o5TQ0DlmPfNMBrNDEKxTO7uTt/hi1RXKQdKGJlv+W7MJJeTRO6Y9JoRE7IxCOEnH7IsN0yYJadJQ==",
+  "dgSpecHash": "h6Pw2iCNIM2A/5me4xaA+YHCQ0dXHCsaPfY6REWPgdcyKZkIJtyKJoPEDCE6N0vmhHHuR5cDaEIcg1XJy06wRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\benson922\\Documents\\sideproj\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
+  "projectFilePath": "c:\\Users\\nerod\\Documents\\SideProj-FourSeasonRiver\\BackendService\\RedisService\\RedisService.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\benson922\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
-    "C:\\Users\\benson922\\.nuget\\packages\\stackexchange.redis\\2.6.122\\stackexchange.redis.2.6.122.nupkg.sha512",
-    "C:\\Users\\benson922\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+    "C:\\Users\\nerod\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\nerod\\.nuget\\packages\\stackexchange.redis\\2.6.122\\stackexchange.redis.2.6.122.nupkg.sha512",
+    "C:\\Users\\nerod\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
   ],
   "logs": []
 }
