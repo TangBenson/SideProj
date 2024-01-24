@@ -16,7 +16,7 @@ public sealed class RedisClient
     這是一個字段（field）的定義，它的值在初始化後不會再改變。這就是字段和屬性之間的區別。
     */
     // 通過 s_connectionLazy.Value取得 ConnectionMultiplexer實例
-    public static ConnectionMultiplexer Instance => s_connectionLazy.Value;
+    private static ConnectionMultiplexer Instance => s_connectionLazy.Value;
 
     public static IDatabase Database => Instance.GetDatabase();
 
